@@ -57,7 +57,6 @@ if(isset($_SESSION["password"]) && $_SESSION["password"] != ""){
 
         <button>Genera Password</button>
     </form>
-    <a href="./result.php">Visualizza la password</a>
     <?php
 
     ?>
