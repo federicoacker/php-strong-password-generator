@@ -37,6 +37,11 @@ function create_password(int $length = 0, array $letters = []): string
 </head>
 
 <body>
+    <form action="">
+        <label for="password_length">Lunghezza della password</label>
+        <input id="password_length" name="password_length" type="number" min="0" max="100">
+        <button>Genera Password</button>
+    </form>
 
 </body>
 
