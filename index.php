@@ -2,10 +2,17 @@
 require_once "./functions.php";
 
 session_start();
-if (array_key_last($letters) != 0) {
-    $_SESSION["password"] = create_password($password_length, $letters);
+if (!empty($letters)) {
+    $password = create_password($password_length, $letters);
 } else {
-    $_SESSION["password"] = "";
+    $password = "";
+}
+
+if($password != ""){
+    $_SESSION["password"] = $password;
+}
+if(isset($_SESSION["password"]) && $_SESSION["password"] != ""){
+    header("Location: ./result.php");
 }
 
 ?>
